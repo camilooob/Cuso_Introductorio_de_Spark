@@ -172,12 +172,12 @@ sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get -y install openjdk-8-jre
 ```
 
-- Python 3.7 esto porque spark 2.4 no tiene soporte aun para python 3.8
+- Python 3.8 esto porque spark 3.1 con python 3.8
 
 ```bash
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
-sudo apt install python3.7
+
 ```
 
 - Scala
@@ -198,18 +198,18 @@ sudo pip3 install py4j
 
 En la pagina de Apache Spark <https://spark.apache.org/downloads.html>
 
-Seleccionamos la opción Spark release 2.4.1, con el Pre-built for Apache Hadoop 2.7, y después haces click en Download.
+Seleccionamos la opción Spark release 3.1.1, con el Pre-built for Apache Hadoop 3, y después haces click en Download.
 
 Descarga directo a wsl con curl o de forma habitual con windows
 
 ```bash
-curl -o spark-2.4.7-bin-hadoop2.7.tgz https://downloads.apache.org/spark/spark-2.4.7/spark-2.4.7-bin-hadoop2.7.tgz
+curl -o spark-3.1.1-bin-hadoop3.2.tgz https://downloads.apache.org/spark/spark-3.1.1/spark-3.1.1-bin-hadoop3.2.tgz
 ```
 
 Descomprimir el archivo (debes estar en el folder donde se encuentre descargado tu archivo)
 
 ```bash
-tar -xvf spark-2.4.7-bin-hadoop2.7.tgz
+tar -xvf spark-3.1.1-bin-hadoop3.2.tgz
 
 #verificamos
 ls
@@ -218,7 +218,7 @@ ls
 Renombramos la carpeta/directorio
 
 ```bash
-mv spark-2.4.7-bin-hadoop2.7 spark
+mv spark-3.1.1-bin-hadoop3.2 spark
 ```
 
 movemos la carpeta a home
@@ -230,34 +230,8 @@ mv spark ~/
 Borramos el archivo tgz que descargamos
 
 ```bash
-rm spark-2.4.7-bin-hadoop2.7.tgz
-```
+rm spark-3.1.1-bin-hadoop3.2.tgz
 
-#### Instalacion de Anaconda
-
-```bash
-# Descargamos
-wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
-
-# Instalamos
-bash Anaconda3-2020.02-Linux-x86_64.sh
-
-# Do you wish the installer to initialize Anaconda3
-# by running conda init? [yes|no]
-# [no] >>> no
-```
-
-#### Instalamos py4j en Anaconda
-
-Para poder hacer uso del instalador de anaconda exportamos la siguiente variable
-
-```bash
-# la variable $USER para acceder tu nombre de usuario
-export PATH=/home/$USER/anaconda3/bin:$PATH
-
-# Instalamos py4j
-conda install py4j
-```
 
 ### Clase 5 Jupyter vs CLI: ejecucion de Spark desde la linea de comandos
 
@@ -278,7 +252,7 @@ export PATH=$SPARK_HOME:$PATH
 
 ## Python para ser utilizable por Spark
 export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH
-export PYSPARK_PYTHON=python3.7
+export PYSPARK_PYTHON=python3.8
 
 # Guardamos el archivo con ctrl + o
 # recargamos el archivo
