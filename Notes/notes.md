@@ -266,7 +266,7 @@ Hecha la instalacion de Spark agregaremos varias variables de entorno en el arch
 **Nota:** Si eres estudiante de platzi, y por alguna razón usas zshell  y no la bash (la terminal por defecto sin customizar) deberás incluir la configuracion en el archivo .zshrc y no en el archivo .bashrc.
 
 ```bash
-sudo nano .bashrc
+sudo vim .bashrc
 
 ## Path de Java
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
