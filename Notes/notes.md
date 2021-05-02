@@ -388,8 +388,12 @@ export PATH=/home/spark/anaconda3/bin:$PATH
 te recomiendo instalar jupyter via pip puntualmente para la version 3.7 de python, la segunda recomendación es utilizar un venv, aunque siempre es util tener jupyter a mano, si lo tienes para python 3.8 es necesario borrar todo rastro de la instalacion.
 
 ```bash
-python3.7 -m pip install jupyter
+python3.8 -m pip install jupyter
 ```
+Terminar de configurar jupypter notebook en esta guia: Normalmente pongo como pass mi numero de documento. 
+
+https://dataschool.com/data-modeling-101/running-jupyter-notebook-on-an-ec2-server/
+
 
 Ahora podemos llamar a jupyter de forma normal o solo escribiendo pyspark.
 
