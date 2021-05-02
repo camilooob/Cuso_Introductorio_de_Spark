@@ -167,7 +167,7 @@ Instalaremos lo siguiente en linux/wsl2
 - Agregamos java8 usando open jdk
 
 ```bash
-sudo ad-apt-repository ppa:openjdk-r/ppa
+sudo add-apt-repository ppa:openjdk-r/ppa
 sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get -y install openjdk-8-jre
 ```
