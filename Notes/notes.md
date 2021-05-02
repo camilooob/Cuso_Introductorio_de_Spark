@@ -353,16 +353,16 @@ Ejecutamos el código con spark-submit y optemos los resultados
 
 Solucionar el primer warning descarga los binarios de hadoop (version 2.7.3, puedes probar 2.10.0)
 
-<https://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz>
+curl -o hadoop-3.2.2-site.tar.gz  https://downloads.apache.org/hadoop/common/hadoop-3.2.2/hadoop-3.2.2-site.tar.gz
 
 Y ejecuta lo siguiente en la terminal
 
 ```bash
 # descomprimir
-tar -xvf hadoop-2.7.3.tar.gz
+tar -xvf hadoop-3.2.2-site.tar.gz
 
 #Renombramos la carpeta/directorio
-mv hadoop-2.7.3.tar.gz hadoop
+mv r3.2.2 hadoop
 
 # movemos la carpeta a home
 mv hadoop ~/
